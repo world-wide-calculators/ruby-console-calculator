@@ -15,7 +15,11 @@ begin
 		when "*"
 			@ans = @n1*@n2
 		when "/"
-			@ans = @n1/@n2
+			if @n2 == 0
+				puts "You can't divide by zero!"
+			else
+				@ans = @n1/@n2
+			end
 		when "^"
 			@ans = @n1**@n2
 		else
